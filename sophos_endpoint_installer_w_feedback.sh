@@ -2,7 +2,8 @@
 # see https://docs.sophos.com/central/customer/help/en-us/PeopleAndDevices/ProtectDevices/EndpointProtection/MacDeployment/index.html#create-sophos-installation-script for installation details
 ### This script is not supplied by Sophos. Use at your own risk.
 ### It adds feedback to your Jamf Policy, reporting success if 1) the scanextension is running and 
-### 2) the Sophos Endpoint.app is installed, and times out after 15 minutes.
+### 2) the Sophos Endpoint.app is installed, and AFTER IT IS FIXED times out after 15 minutes
+###   ###   THIS SCRIPT HAS AN INFINITE LOOP BEFORE THE 15 MIN TIME-OUT AND MUST BE FIXED  ###   ###
 START="$(date +%s)"
 SOPHOS_DIR="/Users/Shared/Sophos_Install"
 mkdir $SOPHOS_DIR
